@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "agni-mobile-app",
+    "slug": "agni-mobile-app"
+  }
+}
