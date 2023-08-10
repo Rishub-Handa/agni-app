@@ -16,6 +16,11 @@ const styles = StyleSheet.create({
         // borderColor: 'black',
         // borderWidth: 1
     },
+    
+    heading: {
+        fontFamily: FONT.medium,
+        fontSize: SIZES.large,
+    },
 
     preRoutineImage: {
         width: "80%",

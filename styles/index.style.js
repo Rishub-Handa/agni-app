@@ -13,31 +13,7 @@ const styles = StyleSheet.create({
         fontFamily: FONT.medium,
         fontSize: SIZES.large,
     },
-    forYouCardContainer: {
-        width: "100%",
-        alignSelf: "center",
-        // height: 400,
-        backgroundColor: "#FFFFFF",
-        borderRadius: SIZES.medium,
-        padding: SIZES.small,
-        margin: SIZES.medium,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    forYouImage: {
-        'width': '80%',
-        'height': 200,
-        margin: SIZES.medium,
-    },
-    startButton: {
-        width: "100%",
-        alignSelf: "center",
-        height: 60,
-        borderRadius: SIZES.small,
-        backgroundColor: COLORS.primary,
-        justifyContent: "center",
-        alignItems: "center",
-    },
+    
     homeScreenRelaxCardContainer: {
         width: "100%",
         alignSelf: "center",

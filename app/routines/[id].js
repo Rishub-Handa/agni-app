@@ -7,6 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { COLORS, SIZES, images, } from '../../constants'
 import styles from '../../styles/preroutine.style'
 import routines from '../../data/routines'
+import mixpanel from '../../constants/analytics';
 
 
 const Routine = () => {
@@ -14,6 +15,7 @@ const Routine = () => {
     const params = useSearchParams()
     const { id } = params
     const { title, audioFile } = routines[id]
+    mixpanel.track(`Routine Screen Visit - ${id}`);
 
     const [sound, setSound] = useState();
     const [isPlaying, setIsPlaying] = useState(false);

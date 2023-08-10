@@ -1,8 +1,9 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { Stack, useRouter, useNavigation } from 'expo-router';
 import { COLORS, SIZES, images, } from '../../constants'
-import RoutineCard from '../../components/routine-card/RoutineCard'
+import RoutineCard from '../../components/cards/RoutineCard'
 import styles from '../../styles/lifestyle.style'
+import mixpanel from '../../constants/analytics';
 
 
 const lifestyleCards = [
@@ -17,11 +18,15 @@ const progressionCards = [
     {name: 'Forward Fold', image: images.forwardFoldPoseImage, routineId: 'ForwardFold'},
 ]
 
+const foundationsCards = [
+    {name: 'Day 1', image: images.forwardFoldPoseImage, routineId: 'Foundations-Day1'},
+]
+
 
 const Lifestyle = () => {
 
     const router = useRouter();
-    
+    mixpanel.track("Lifestyle Screen Visit");
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -48,8 +53,13 @@ const Lifestyle = () => {
                         {progressionCards.map((card) => RoutineCard(card))}
                     </View>
 
-                    <Text style={styles.heading}>Relaxation</Text>
-                    <Text>Coming soon...</Text>
+                    {/* <Text style={styles.heading}>Foundations</Text>
+                    <View style={styles.routineCardGroupContainer}>
+                        {foundationsCards.map((card) => RoutineCard(card))}
+                    </View> */}
+
+                    {/* <Text style={styles.heading}>Relaxation</Text>
+                    <Text>Coming soon...</Text> */}
                     
 
 

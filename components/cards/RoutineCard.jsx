@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from 'expo-router';
-import styles from './routinecard.style'
+import styles from './card.style'
 
 const RoutineCard = ({name, image, routineId}) => {
     const navigation = useNavigation();

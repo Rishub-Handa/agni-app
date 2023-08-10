@@ -5,6 +5,7 @@ import styles from '../styles/preroutine.style'
 import { useRoute } from '@react-navigation/native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import routines from '../data/routines'
+import mixpanel from '../constants/analytics';
 
 
 const PreRoutine = () => {
@@ -13,9 +14,9 @@ const PreRoutine = () => {
     const route = useRoute()
     const { routineId } = route.params
     console.log("ROUTINE ID", routineId)
+    mixpanel.track(`PreRoutine Screen Visit - ${routineId}`);
 
     const { title, coverImage, skills, level, duration } = routines[routineId]
-
  
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -31,7 +32,7 @@ const PreRoutine = () => {
             
             
             <View style={styles.container}>
-                <Text>{title}</Text>
+                <Text style={styles.heading}>{title}</Text>
 
                 <Image 
                     source={coverImage}

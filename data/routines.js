@@ -1,9 +1,10 @@
 import { images, audio } from '../constants'
 
 const routines = {
-    'Foundations-Day2': {
-        'title': 'Day 2',
-        'skills': 'Balance', 
+    'Foundations-Day1': {
+        'title': 'Day 1',
+        'group': 'Foundations',
+        'skills': 'Flexibility', 
         'duration': '5min',
         'level': 'Beginner', 
         'coverImage': images.forwardFoldPoseImage,
@@ -11,6 +12,7 @@ const routines = {
     }, 
     'WakeUp': {
         'title': 'Wake Up',
+        'group': 'Lifestyle',
         'skills': 'Breathing', 
         'duration': '5min',
         'level': 'Beginner', 
@@ -19,6 +21,7 @@ const routines = {
     }, 
     'Posture': {
         'title': 'Posture',
+        'group': 'Lifestyle',
         'skills': 'Balance',
         'duration': '5min',
         'level': 'Beginner',
@@ -27,6 +30,7 @@ const routines = {
     },
     'MiddayBreak': {
         'title': 'Midday Break',
+        'group': 'Lifestyle',
         'skills': 'Breathing',
         'duration': '5min',
         'level': 'Beginner',
@@ -35,6 +39,7 @@ const routines = {
     },
     'BeforeActivity': {
         'title': 'Before Activity',
+        'group': 'Lifestyle',
         'skills': 'Flexibility',
         'duration': '5min',
         'level': 'Beginner',
@@ -43,6 +48,7 @@ const routines = {
     },
     'TreePose': {
         'title': 'Tree Pose',
+        'group': 'Progression',
         'skills': 'Balance',
         'duration': '5min',
         'level': 'Beginner',
@@ -51,6 +57,7 @@ const routines = {
     },
     'ForwardFold': {
         'title': 'Forward Fold',
+        'group': 'Progression',
         'skills': 'Flexibility',
         'duration': '5min',
         'level': 'Beginner',
