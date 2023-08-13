@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import { COLORS, FONT, SIZES } from "../constants";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const styles = StyleSheet.create({
     container: {
@@ -20,6 +19,7 @@ const styles = StyleSheet.create({
     heading: {
         fontFamily: FONT.medium,
         fontSize: SIZES.large,
+        color: COLORS.black,
     },
 
     preRoutineImage: {
@@ -34,8 +34,6 @@ const styles = StyleSheet.create({
         
     },
 
-
-
     preRoutineInfoLine: {
         width: "100%",
         display: "flex",
@@ -43,10 +41,14 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: 'center',
         marginVertical: 0,
+        color: COLORS.black,
     },
 
-
-
+    preRoutineInfoText: {
+        fontFamily: FONT.regular,
+        fontSize: SIZES.medium,
+        color: COLORS.black,
+    },
 
     startButton: {
         width: "100%",
@@ -57,6 +59,13 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+
+    startButtonText: {
+        fontFamily: FONT.regular,
+        fontSize: SIZES.medium,
+        // color: COLORS.fullBlack,
+        color: "#000000"
+    }
     
 
 

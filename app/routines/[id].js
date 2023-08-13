@@ -5,7 +5,7 @@ import { Audio } from 'expo-av';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { COLORS, SIZES, images, } from '../../constants'
-import styles from '../../styles/preroutine.style'
+import styles from '../../styles/routine.style'
 import routines from '../../data/routines'
 import mixpanel from '../../constants/analytics';
 
@@ -14,7 +14,7 @@ const Routine = () => {
 
     const params = useSearchParams()
     const { id } = params
-    const { title, audioFile } = routines[id]
+    const { title, audioFile, coverImage } = routines[id]
     mixpanel.track(`Routine Screen Visit - ${id}`);
 
     const [sound, setSound] = useState();
@@ -53,6 +53,12 @@ const Routine = () => {
         setIsPlaying(true);
     }
 
+    // Play sound on page load
+    useEffect(() => {
+        playSound();
+    }, []);
+
+
     useEffect(() => {
         return sound
           ? () => {
@@ -60,14 +66,17 @@ const Routine = () => {
               sound.unloadAsync();
             }
           : undefined;
-      }, [sound]);
+    }, [sound]);
+
+
+    
 
  
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black }}>
             <Stack.Screen
                 options={{
-                    headerStyle: { backgroundColor: COLORS.white },
+                    headerStyle: { backgroundColor: COLORS.black },
                     headerShadowVisible: false,
                     headerTitle: ""
                 }}
@@ -76,20 +85,26 @@ const Routine = () => {
             
             
             <View style={styles.container}>
-                <Text>{title}</Text>
+                <Text></Text>
+
+                <Image 
+                    source={coverImage}
+                    style={styles.routineImage}
+                    resizeMode='contain'
+                />
                 
                 {/* Play button */}
                 {isPlaying ? (
                     <TouchableOpacity onPress={pauseSound}>
-                        <MaterialCommunityIcons name="pause-circle-outline" size={120} color="black" />
+                        <MaterialCommunityIcons name="pause-circle-outline" size={120} color={COLORS.lightWhite} />
                     </TouchableOpacity>
                 ) : sound ? (
                     <TouchableOpacity onPress={resumeSound}>
-                        <MaterialCommunityIcons name="play-circle-outline" size={120} color="black" />
+                        <MaterialCommunityIcons name="play-circle-outline" size={120} color={COLORS.lightWhite} />
                     </TouchableOpacity>
                 ) : (
                     <TouchableOpacity onPress={playSound}>
-                        <MaterialCommunityIcons name="play-circle-outline" size={120} color="black" />
+                        <MaterialCommunityIcons name="play-circle-outline" size={120} color={COLORS.lightWhite} />
                     </TouchableOpacity>
                 )}
 

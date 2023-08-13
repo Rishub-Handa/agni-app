@@ -1,10 +1,15 @@
 {
   "expo": {
     "scheme": "acme",
-    "web": {
-      "bundler": "metro"
-    },
     "name": "agni-mobile-app",
-    "slug": "agni-mobile-app"
+    "slug": "agni-mobile-app",
+    "extra": {
+      "eas": {
+        "projectId": "7255296c-df40-4506-8abf-6088fa2c7906"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.rishub1205.agnimobileapp"
+    }
   }
 }

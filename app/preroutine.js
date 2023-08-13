@@ -42,13 +42,13 @@ const PreRoutine = () => {
 
                 <View style={styles.preRoutineInfoContainer}>
                     <View style={styles.preRoutineInfoLine}>
-                        <Text>Skills</Text>
-                        <Text>{skills}</Text>
+                        <Text style={styles.preRoutineInfoText}>Skills</Text>
+                        <Text style={styles.preRoutineInfoText}>{skills}</Text>
                     </View>
                     
                     <View
                         style={{
-                            borderBottomColor: 'black',
+                            borderBottomColor: COLORS.black,
                             borderBottomWidth: StyleSheet.hairlineWidth,
                             width: "100%",
                             marginVertical: SIZES.xxSmall,
@@ -56,9 +56,9 @@ const PreRoutine = () => {
                     />
 
                     <View style={styles.preRoutineInfoLine}>
-                        <Text>Level</Text>
+                        <Text style={styles.preRoutineInfoText}>Level</Text>
                         <TouchableOpacity>
-                            <Text>
+                            <Text style={styles.preRoutineInfoText}>
                                 {level}
                                 {/* TODO: Add customization */}
                                 {/* <MaterialCommunityIcons name="chevron-right" color={'gray'} size={SIZES.medium} /> */}
@@ -69,7 +69,7 @@ const PreRoutine = () => {
 
                     <View
                         style={{
-                            borderBottomColor: 'black',
+                            borderBottomColor: COLORS.black,
                             borderBottomWidth: StyleSheet.hairlineWidth,
                             width: "100%",
                             marginVertical: SIZES.xxSmall,
@@ -77,9 +77,9 @@ const PreRoutine = () => {
                     />
 
                     <View style={styles.preRoutineInfoLine}>
-                        <Text>Time</Text>
+                        <Text style={styles.preRoutineInfoText}>Time</Text>
                         <TouchableOpacity>
-                            <Text>
+                            <Text style={styles.preRoutineInfoText}>
                                 {duration}
                                 {/* TODO: Add customization */}
                                 {/* <MaterialCommunityIcons name="chevron-right" color={'gray'} size={SIZES.medium} /> */}
@@ -94,7 +94,7 @@ const PreRoutine = () => {
                         router.push(`/routines/${routineId}`)
                     }}
                 >
-                    <Text>Start</Text>
+                    <Text style={styles.startButtonText}>Start</Text>
                 </TouchableOpacity>
 
 

@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     cardContainer: {
         width: "49%",
         height: 150,
-        backgroundColor: "#FFFFFF",
+        backgroundColor: COLORS.fullWhite,
         borderRadius: SIZES.medium,
         padding: SIZES.small,
         marginHorizontal: 0,
@@ -20,16 +20,18 @@ const styles = StyleSheet.create({
     cardHeading: {
         fontFamily: FONT.regular,
         fontSize: SIZES.medium,
+        color: COLORS.black,
     },
     heroCardHeading: {
         fontFamily: FONT.regular,
         fontSize: SIZES.large,
+        color: COLORS.black,
     },
     heroCardContainer: {
         width: "100%",
         alignSelf: "center",
         // height: 400,
-        backgroundColor: "#FFFFFF",
+        backgroundColor: COLORS.fullWhite,
         borderRadius: SIZES.medium,
         padding: SIZES.medium,
         margin: SIZES.medium,
@@ -53,7 +55,8 @@ const styles = StyleSheet.create({
     heroCardStartButtonText: {
         fontFamily: FONT.regular,
         fontSize: SIZES.medium,
-        color: "#000000",
+        color: COLORS.fullBlack,
+
     },
 
     

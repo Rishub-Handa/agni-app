@@ -10,8 +10,12 @@ const Layout = () => {
     return (
         // <MyTabs />
         <Tabs screenOptions={{
-            tabBarActiveTintColor: "#000000",
+            tabBarActiveTintColor: COLORS.fullBlack,
             headerShown: false,
+            tabBarStyle: {
+                backgroundColor: COLORS.fullWhite,
+                borderTopWidth: 0,
+            }
             
         }}>
             <Tabs.Screen 
