@@ -5,7 +5,7 @@ import styles from '../styles/preroutine.style'
 import { useRoute } from '@react-navigation/native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import routines from '../data/routines'
-import mixpanel from '../constants/analytics';
+// import mixpanel from '../constants/analytics';
 
 
 const PreRoutine = () => {
@@ -14,7 +14,7 @@ const PreRoutine = () => {
     const route = useRoute()
     const { routineId } = route.params
     console.log("ROUTINE ID", routineId)
-    mixpanel.track(`PreRoutine Screen Visit - ${routineId}`);
+    // mixpanel.track(`PreRoutine Screen Visit - ${routineId}`);
 
     const { title, coverImage, skills, level, duration } = routines[routineId]
  

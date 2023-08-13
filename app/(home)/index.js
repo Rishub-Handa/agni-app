@@ -5,7 +5,7 @@ import { COLORS, SIZES, images, } from '../../constants'
 import RoutineCard from '../../components/cards/RoutineCard'
 import HeroCard from '../../components/cards/HeroCard';
 import styles from '../../styles/index.style'
-import mixpanel from '../../constants/analytics';
+// import mixpanel from '../../constants/analytics';
 
 
 const heroCardId = 'WakeUp'
@@ -17,7 +17,7 @@ const recommendedCards = [
 
 const Home = () => {
 
-    mixpanel.track("Home Screen Visit");
+    // mixpanel.track("Home Screen Visit");
     const router = useRouter();
     const navigation = useNavigation();
     // mixpanel.track("Home Screen Visit");

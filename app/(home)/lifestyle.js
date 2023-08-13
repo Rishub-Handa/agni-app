@@ -3,7 +3,7 @@ import { Stack, useRouter, useNavigation } from 'expo-router';
 import { COLORS, SIZES, images, } from '../../constants'
 import RoutineCard from '../../components/cards/RoutineCard'
 import styles from '../../styles/lifestyle.style'
-import mixpanel from '../../constants/analytics';
+// import mixpanel from '../../constants/analytics';
 
 
 const lifestyleCards = [
@@ -26,7 +26,7 @@ const foundationsCards = [
 const Lifestyle = () => {
 
     const router = useRouter();
-    mixpanel.track("Lifestyle Screen Visit");
+    // mixpanel.track("Lifestyle Screen Visit");
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
