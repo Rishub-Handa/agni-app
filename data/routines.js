@@ -35,7 +35,7 @@ const routines = {
         'duration': '5min',
         'level': 'Beginner',
         'coverImage': images.middayBreakCardImage,
-        'audioFile': undefined
+        'audioFile': audio.middayBreakRoutineAudio
     },
     'BeforeActivity': {
         'title': 'Before Activity',
