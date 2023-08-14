@@ -16,6 +16,11 @@
     "production": {}
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "handarishub@gmail.com",
+        "appleTeamId": "KF6QYMJ2UB"
+      }
+    }
   }
 }

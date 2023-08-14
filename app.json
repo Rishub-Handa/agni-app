@@ -1,15 +1,13 @@
 {
   "expo": {
     "scheme": "acme",
-    "name": "agni-mobile-app",
-    "slug": "agni-mobile-app",
+    "name": "agni-app",
+    "slug": "agni-app",
+    "icon": "./assets/public/app-icon.png",
     "extra": {
       "eas": {
-        "projectId": "7255296c-df40-4506-8abf-6088fa2c7906"
+        "projectId": "c2ff5017-851d-41c6-bad8-3a98d9aa35c5"
       }
-    },
-    "ios": {
-      "bundleIdentifier": "com.rishub1205.agnimobileapp"
     }
   }
 }
