@@ -14,7 +14,7 @@ const routines = {
         'title': 'Wake Up',
         'group': 'Lifestyle',
         'skills': 'Breathing', 
-        'duration': '5min',
+        'duration': '8min',
         'level': 'Beginner', 
         'coverImage': images.wakeUpCardImage,
         'audioFile': audio.wakeupRoutineAudio
@@ -26,13 +26,13 @@ const routines = {
         'duration': '5min',
         'level': 'Beginner',
         'coverImage': images.postureCardImage,
-        'audioFile': undefined
+        'audioFile': audio.postureRoutineAudio
     },
     'MiddayBreak': {
         'title': 'Midday Break',
         'group': 'Lifestyle',
         'skills': 'Breathing',
-        'duration': '5min',
+        'duration': '10min',
         'level': 'Beginner',
         'coverImage': images.middayBreakCardImage,
         'audioFile': audio.middayBreakRoutineAudio
@@ -41,10 +41,10 @@ const routines = {
         'title': 'Before Activity',
         'group': 'Lifestyle',
         'skills': 'Flexibility',
-        'duration': '5min',
+        'duration': '8min',
         'level': 'Beginner',
         'coverImage': images.beforeActivityCardImage,
-        'audioFile': undefined
+        'audioFile': audio.preactivityRoutineAudio
     },
     'TreePose': {
         'title': 'Tree Pose',
