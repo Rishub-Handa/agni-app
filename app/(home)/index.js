@@ -1,11 +1,13 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { useEffect, useState } from 'react';
 import { Stack, useRouter, useNavigation } from 'expo-router';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { COLORS, SIZES, images, } from '../../constants'
 import RoutineCard from '../../components/cards/RoutineCard'
 import HeroCard from '../../components/cards/HeroCard';
 import styles from '../../styles/index.style'
-// import mixpanel from '../../constants/analytics';
+import mixpanel from '../../constants/analytics';
 
 
 const heroCardId = 'WakeUp'
@@ -17,12 +19,52 @@ const recommendedCards = [
 
 const Home = () => {
 
-    // mixpanel.track("Home Screen Visit");
     const router = useRouter();
     const navigation = useNavigation();
-    // mixpanel.track("Home Screen Visit");
-    console.log("LOGGIN")
-    console.log(images.lotusCardImage)
+    console.log("IS DEV: ", __DEV__)
+
+    // If user:data doesnt exist, generate a new ID and store it
+    const generateNewId = () => {
+        const newId = Math.random().toString(36).substring(7);
+        console.log("NEW ID: ", newId)
+
+        return {
+            id: newId,
+            routines: []
+        }
+    }
+
+    // If user:data exists, retrieve it
+    const retrieveData = async () => {
+        try {
+            const storageKey = 'user:data'
+            const jsonValue = await AsyncStorage.getItem(storageKey)
+
+            // If no data exists, generate a new ID and store it
+            if (jsonValue == null) {
+                const data = generateNewId()
+                AsyncStorage.setItem(storageKey, JSON.stringify(data))
+                return data
+            }
+            return JSON.parse(jsonValue)
+        } catch(e) {
+            console.log("Error retrieving data: ", e)
+        }
+    }
+
+
+    useEffect(() => {
+        (async () => {
+            const userData = await retrieveData()
+            console.log("USER DATA: ", userData)
+            
+            mixpanel.identify(userData.id);
+            mixpanel.track(`Home Screen Visit`);
+        })()
+    }, [])
+
+
+
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>

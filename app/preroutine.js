@@ -1,20 +1,21 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { Stack, useRouter } from 'expo-router';
+import { Stack, useRouter, useNavigation } from 'expo-router';
 import { COLORS, SIZES, images, } from '../constants'
 import styles from '../styles/preroutine.style'
 import { useRoute } from '@react-navigation/native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import routines from '../data/routines'
-// import mixpanel from '../constants/analytics';
+import mixpanel from '../constants/analytics';
 
 
 const PreRoutine = () => {
 
+    const navigation = useNavigation();
     const router = useRouter();
     const route = useRoute()
     const { routineId } = route.params
     console.log("ROUTINE ID", routineId)
-    // mixpanel.track(`PreRoutine Screen Visit - ${routineId}`);
+    mixpanel.track(`PreRoutine Screen Visit - ${routineId}`);
 
     const { title, coverImage, skills, level, duration } = routines[routineId]
  
@@ -32,6 +33,12 @@ const PreRoutine = () => {
             
             
             <View style={styles.container}>
+                <View style={styles.goBackContainer}>
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <MaterialCommunityIcons name="chevron-left" color={COLORS.black} size={SIZES.xxLarge} />
+                    </TouchableOpacity>
+                </View>
+
                 <Text style={styles.heading}>{title}</Text>
 
                 <Image 

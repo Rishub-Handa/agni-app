@@ -1,21 +1,24 @@
 import { useEffect, useState } from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { Stack, useRouter, useSearchParams } from 'expo-router';
+import { Stack, useRouter, useSearchParams, useNavigation } from 'expo-router';
 import { Audio } from 'expo-av';
+import { useKeepAwake } from 'expo-keep-awake';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { COLORS, SIZES, images, } from '../../constants'
 import styles from '../../styles/routine.style'
 import routines from '../../data/routines'
-// import mixpanel from '../../constants/analytics';
+import mixpanel from '../../constants/analytics';
 
 
 const Routine = () => {
 
+    useKeepAwake();
+
+    const navigation = useNavigation();
     const params = useSearchParams()
     const { id } = params
     const { title, audioFile, coverImage } = routines[id]
-    // mixpanel.track(`Routine Screen Visit - ${id}`);
 
     const [sound, setSound] = useState();
     const [isPlaying, setIsPlaying] = useState(false);
@@ -56,6 +59,7 @@ const Routine = () => {
     // Play sound on page load
     useEffect(() => {
         playSound();
+        mixpanel.track(`Routine Screen Visit - ${id}`);
     }, []);
 
 
@@ -85,7 +89,12 @@ const Routine = () => {
             
             
             <View style={styles.container}>
-                <Text></Text>
+                <View style={styles.goBackContainer}>
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <MaterialCommunityIcons name="chevron-left" color={COLORS.white} size={SIZES.xxLarge} />
+                    </TouchableOpacity>
+                </View>
+                
 
                 <Image 
                     source={coverImage}

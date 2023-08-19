@@ -10,10 +10,17 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         alignSelf: "center",
-        marginVertical: SIZES.xxLarge,
+        marginVertical: SIZES.medium,
 
         // borderColor: 'black',
         // borderWidth: 1
+    },
+
+    goBackContainer: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
     },
     
     heading: {

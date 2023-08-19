@@ -14,8 +14,13 @@ const styles = StyleSheet.create({
         marginVertical: SIZES.xxLarge,
         backgroundColor: COLORS.black,
 
-        // borderColor: 'black',
-        // borderWidth: 1
+    },
+
+    goBackContainer: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
     },
     
     heading: {
