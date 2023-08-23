@@ -8,7 +8,8 @@ const routines = {
         'duration': '5min',
         'level': 'Beginner', 
         'coverImage': images.forwardFoldPoseImage,
-        'audioFile': undefined
+        'audioFile': undefined,
+        'description': ''
     }, 
     'WakeUp': {
         'title': 'Wake Up',
@@ -17,7 +18,9 @@ const routines = {
         'duration': '8min',
         'level': 'Beginner', 
         'coverImage': images.wakeUpCardImage,
-        'audioFile': audio.wakeupRoutineAudio
+        'audioFile': audio.wakeupRoutineAudio,
+        'description': 'A mental and physical break from a busy day. \n\n Begin on a mat or soft surface.', 
+        'keyPoses': []
     }, 
     'Posture': {
         'title': 'Posture',
@@ -26,7 +29,8 @@ const routines = {
         'duration': '5min',
         'level': 'Beginner',
         'coverImage': images.postureCardImage,
-        'audioFile': audio.postureRoutineAudio
+        'audioFile': audio.postureRoutineAudio,
+        'description': 'A mental and physical break from a busy day. \n\n Begin on a mat or soft surface.'
     },
     'MiddayBreak': {
         'title': 'Midday Break',
@@ -35,7 +39,8 @@ const routines = {
         'duration': '10min',
         'level': 'Beginner',
         'coverImage': images.middayBreakCardImage,
-        'audioFile': audio.middayBreakRoutineAudio
+        'audioFile': audio.middayBreakRoutineAudio,
+        'description': 'A mental and physical break from a busy day. \n\n Begin on a mat or soft surface.'
     },
     'BeforeActivity': {
         'title': 'Before Activity',
@@ -44,7 +49,8 @@ const routines = {
         'duration': '8min',
         'level': 'Beginner',
         'coverImage': images.beforeActivityCardImage,
-        'audioFile': audio.preactivityRoutineAudio
+        'audioFile': audio.preactivityRoutineAudio,
+        'description': 'A mental and physical break from a busy day. \n\n Begin on a mat or soft surface.'
     },
     'TreePose': {
         'title': 'Tree Pose',
@@ -53,7 +59,8 @@ const routines = {
         'duration': '5min',
         'level': 'Beginner',
         'coverImage': images.treePoseImage,
-        'audioFile': undefined
+        'audioFile': undefined,
+        'description': 'A mental and physical break from a busy day. \n\n Begin on a mat or soft surface.'
     },
     'ForwardFold': {
         'title': 'Forward Fold',
@@ -62,9 +69,20 @@ const routines = {
         'duration': '5min',
         'level': 'Beginner',
         'coverImage': images.forwardFoldPoseImage,
-        'audioFile': undefined
+        'audioFile': undefined,
+        'description': 'A mental and physical break from a busy day. \n\n Begin on a mat or soft surface.'
     },
     
 }
+
+const poses = {
+
+
+
+
+}
+
+
+
 
 export default routines;

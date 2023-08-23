@@ -41,6 +41,8 @@ const PreRoutine = () => {
 
                 <Text style={styles.heading}>{title}</Text>
 
+                <Text></Text>
+
                 <Image 
                     source={coverImage}
                     style={styles.preRoutineImage}
@@ -98,7 +100,8 @@ const PreRoutine = () => {
                 <TouchableOpacity 
                     style={styles.startButton}
                     onPress={() => {
-                        router.push(`/routines/${routineId}`)
+                        // router.push(`/routines/${routineId}`)
+                        navigation.navigate('keyposes', {routineId})
                     }}
                 >
                     <Text style={styles.startButtonText}>Start</Text>
