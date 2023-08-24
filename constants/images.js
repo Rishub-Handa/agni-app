@@ -11,6 +11,8 @@ import middayBreakCardImage from '../assets/images/lifestyle-card-images-midday.
 import postureCardImage from '../assets/images/lifestyle-card-images-posture.png'
 import beforeActivityCardImage from '../assets/images/lifestyle-card-images-golf2.png'
 
+import childsPoseIcon from '../assets/images/childs-pose-icon.png'
+
 export default {
     lotusCardImage,
     treePoseImage,
@@ -24,4 +26,6 @@ export default {
     middayBreakCardImage,
     postureCardImage,
     beforeActivityCardImage,
+
+    childsPoseIcon
 };

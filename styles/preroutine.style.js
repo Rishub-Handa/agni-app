@@ -29,6 +29,33 @@ const styles = StyleSheet.create({
         color: COLORS.black,
     },
 
+    preRoutineImage: {
+        width: "80%",
+        height: 300,
+        marginVertical: SIZES.large,
+    },
+
+    preRoutineInfoContainer: {
+        width: "100%",
+        marginVertical: SIZES.medium,
+        
+    },
+
+    preRoutineInfoLine: {
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: 'center',
+        marginVertical: 0,
+        color: COLORS.black,
+    },
+
+    preRoutineInfoText: {
+        fontFamily: FONT.regular,
+        fontSize: SIZES.medium,
+        color: COLORS.black,
+    },
     
 
 

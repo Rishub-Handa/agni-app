@@ -11,9 +11,20 @@ const styles = StyleSheet.create({
         alignItems: "center",
         alignSelf: "center",
         marginVertical: SIZES.medium,
+        flexDirection: "column",
 
         // borderColor: 'black',
         // borderWidth: 1
+    },
+
+    headerContainer: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        alignSelf: "flex-start",
+        marginVertical: SIZES.small,
+        flexDirection: "column",
     },
 
     goBackContainer: {
@@ -26,7 +37,7 @@ const styles = StyleSheet.create({
     heading: {
         fontFamily: FONT.medium,
         fontSize: SIZES.large,
-        color: COLORS.black,
+        color: COLORS.black,        
     },
 
     description: {
@@ -34,39 +45,13 @@ const styles = StyleSheet.create({
         fontSize: SIZES.medium,
         color: COLORS.lightBlack,
         textAlign: "center",
+        marginVertical: SIZES.small,
     },
 
-    preRoutineImage: {
-        width: "80%",
-        height: 300,
-        marginVertical: SIZES.large,
-    },
-
-    preRoutineInfoContainer: {
-        width: "100%",
-        marginVertical: SIZES.medium,
-        
-    },
-
-    preRoutineInfoLine: {
-        width: "100%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: 'center',
-        marginVertical: 0,
-        color: COLORS.black,
-    },
-
-    preRoutineInfoText: {
-        fontFamily: FONT.regular,
-        fontSize: SIZES.medium,
-        color: COLORS.black,
-    },
 
     startButton: {
         width: "100%",
-        alignSelf: "center",
+        alignSelf: "flex-end",
         height: 60,
         borderRadius: SIZES.small,
         backgroundColor: COLORS.primary,
@@ -79,6 +64,44 @@ const styles = StyleSheet.create({
         fontSize: SIZES.medium,
         // color: COLORS.fullBlack,
         color: "#000000"
+    },
+
+    poseListContainer: {
+        width: "100%",
+
+    },
+
+    poseListItemContainer: {
+        width: "100%",
+        height: 100,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginVertical: SIZES.xxSmall,
+        alignSelf: "flex-start",
+        
+
+        // borderColor: 'black',
+        // borderWidth: 1
+    },
+
+    poseListItemImage: {
+        height: 100,
+        width: 100,
+        borderRadius: SIZES.small,
+        marginLeft: SIZES.small,
+    },
+
+    poseListItemText: {
+        fontFamily: FONT.regular,
+        fontSize: SIZES.large,
+        color: COLORS.black,
+        justifyContent: "flex-end",
+        marginRight: SIZES.small,
+        
+
+
     }
     
 

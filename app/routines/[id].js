@@ -7,7 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import { COLORS, SIZES, images, } from '../../constants'
 import styles from '../../styles/routine.style'
-import routines from '../../data/routines'
+import { routines } from '../../data/routines'
 import mixpanel from '../../constants/analytics';
 
 

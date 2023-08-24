@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from 'expo-router';
 import styles from './card.style'
-import routines from '../../data/routines';
+import { routines } from '../../data/routines';
 
 const HeroCard = ({routineId}) => {
     const navigation = useNavigation();

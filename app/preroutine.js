@@ -4,7 +4,7 @@ import { COLORS, SIZES, images, } from '../constants'
 import styles from '../styles/preroutine.style'
 import { useRoute } from '@react-navigation/native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import routines from '../data/routines'
+import { routines } from '../data/routines'
 import mixpanel from '../constants/analytics';
 
 
