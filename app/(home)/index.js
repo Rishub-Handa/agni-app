@@ -13,8 +13,8 @@ import mixpanel from '../../constants/analytics';
 const heroCardId = 'WakeUp'
 
 const recommendedCards = [
-    {name: 'Midday Break', image: images.middayBreakCardImage, routineId: 'MiddayBreak'},
     {name: 'Posture', image: images.postureCardImage, routineId: 'Posture'},
+    {name: 'Midday Break', image: images.middayBreakCardImage, routineId: 'MiddayBreak'},
 ]
 
 const Home = () => {

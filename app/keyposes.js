@@ -1,28 +1,71 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { useState } from 'react';
 import { Stack, useRouter, useNavigation } from 'expo-router';
 import { COLORS, SIZES, images, } from '../constants'
 import styles from '../styles/keyposes.style'
 import { useRoute } from '@react-navigation/native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Modal from 'react-native-modal';
 import { routines, poses } from '../data/routines'
 import mixpanel from '../constants/analytics';
 
 
+const PoseInfoModal = ({ poseId, isVisible, setPoseModalIsVisible }) => {
 
-const PoseListItem = ({ poseId }) => {
+    if(!poseId) return <></>
+
+    const { title, image, description } = poses[poseId]
+
+    return (
+        <Modal
+            isVisible={isVisible}
+            animationIn="slideInUp"
+            animationOut="slideOutDown"
+            backdropOpacity={0.5}
+            onBackdropPress={() => {
+                setPoseModalIsVisible(false)
+            }}
+            style={styles.modal}
+        >
+            
+            <View style={styles.modalContainer}>
+                <ScrollView>
+                    <Text style={styles.modalHeaderText}>{title}</Text>
+                    <Image
+                        source={image}
+                        style={styles.modalImage}
+                    />
+                    <Text style={styles.modalDescription}>{description}</Text>
+                </ScrollView>
+            </View>
+        </Modal>
+    )
+
+}
+
+
+
+const PoseListItem = ({ poseId, setSelectedPose, setPoseModalIsVisible }) => {
 
     const { title, image } = poses[poseId]
 
     return (
-        <View style={styles.poseListItemContainer}>
-            <Image 
-                source={image}
-                style={styles.poseListItemImage}
-            />
+        <TouchableOpacity
+            onPress={() => {
+                setSelectedPose(poseId)
+                setPoseModalIsVisible(true)
+            }}
+        >
+            <View style={styles.poseListItemContainer}>
+                <Image 
+                    source={image}
+                    style={styles.poseListItemImage}
+                />
+                <Text style={styles.poseListItemText}>{title}</Text>
 
-            <Text style={styles.poseListItemText}>{title}</Text>
-
-        </View>
+            </View>
+        </TouchableOpacity>
+        
     )
     
 }
@@ -36,7 +79,9 @@ const KeyPoses = () => {
     const route = useRoute()
     const { routineId } = route.params
     console.log("ROUTINE ID", routineId)
-    mixpanel.track(`PreRoutine Screen Visit - ${routineId}`);
+    mixpanel.track(`Keyposes Screen Visit - ${routineId}`);
+    const [selectedPose, setSelectedPose] = useState('')
+    const [poseModalIsVisible, setPoseModalIsVisible] = useState(false)
 
     const { title, description } = routines[routineId]
  
@@ -54,6 +99,9 @@ const KeyPoses = () => {
             
             
             <View style={styles.container}>
+
+                <PoseInfoModal poseId={selectedPose} isVisible={poseModalIsVisible} setPoseModalIsVisible={setPoseModalIsVisible} />
+
                 <View style={styles.headerContainer}>
                     <View style={styles.goBackContainer}>
                         <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -80,7 +128,10 @@ const KeyPoses = () => {
                     horizontal={false}
                 >
                     {routines[routineId].keyPoses.map((poseId, index) => (
-                        <PoseListItem key={index} poseId={poseId} />
+                        <PoseListItem 
+                            key={index} poseId={poseId} 
+                            setPoseModalIsVisible={setPoseModalIsVisible} setSelectedPose={setSelectedPose} 
+                        />
                     ))}
                 </ScrollView>
 

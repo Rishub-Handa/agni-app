@@ -100,11 +100,41 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         marginRight: SIZES.small,
         
-
-
-    }
+    },
     
+    modalContainer: {
+        backgroundColor: COLORS.white,
+        borderRadius: SIZES.xLarge,
+        width: "100%",
+        height: "70%",
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        padding: SIZES.large,
 
+    },
+
+    modalHeaderText: {
+        fontFamily: FONT.medium,
+        fontSize: SIZES.large,
+        color: COLORS.black,
+        textAlign: "center",
+        marginVertical: SIZES.large,
+    },
+
+    modalImage: {
+        height: 250,
+        width: 250,
+        alignSelf: "center",
+    },
+
+    modalDescription: {
+        fontFamily: FONT.regular,
+        fontSize: SIZES.medium,
+        color: COLORS.lightBlack,
+        textAlign: "center",
+        marginVertical: SIZES.medium,
+    },
 
     
 
