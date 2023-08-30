@@ -12,6 +12,7 @@ import postureCardImage from '../assets/images/lifestyle-card-images-posture.png
 import beforeActivityCardImage from '../assets/images/lifestyle-card-images-golf2.png'
 
 import butterflyPoseIcon from '../assets/images/circle-icons/butterfly-circle-icon.png'
+import backTwistPoseIcon from '../assets/images/circle-icons/back-twist-circle-icon.png'
 import childsPoseIcon from '../assets/images/circle-icons/childs-pose-circle-icon.png'
 import downwardDogPoseIcon from '../assets/images/circle-icons/downward-dog-circle-icon.png'
 import forwardFoldPoseIcon from '../assets/images/circle-icons/forward-fold-circle-icon.png'
@@ -19,6 +20,7 @@ import standingForwardFoldPoseIcon from '../assets/images/circle-icons/forward-f
 import invertedTablePoseIcon from '../assets/images/circle-icons/inverted-table-circle-icon.png'
 import kneeHugPoseIcon from '../assets/images/circle-icons/knee-hug-circle-icon.png'
 import sideToSidePoseIcon from '../assets/images/circle-icons/side-to-side-circle-icon.png'
+import singleLegForwardFoldPoseIcon from '../assets/images/circle-icons/single-leg-forward-fold-circle-icon.png'
 import supineTwistPoseIcon from '../assets/images/circle-icons/supine-twist-circle-icon.png'
 import tablePoseIcon from '../assets/images/circle-icons/table-circle-icon.png'
 import treePoseIcon from '../assets/images/circle-icons/tree-pose-circle-icon.png'
@@ -41,6 +43,7 @@ export default {
     beforeActivityCardImage,
 
     butterflyPoseIcon,
+    backTwistPoseIcon,
     childsPoseIcon,
     downwardDogPoseIcon,
     forwardFoldPoseIcon,
@@ -48,6 +51,7 @@ export default {
     invertedTablePoseIcon,
     kneeHugPoseIcon,
     sideToSidePoseIcon,
+    singleLegForwardFoldPoseIcon,
     supineTwistPoseIcon,
     tablePoseIcon,
     treePoseIcon,

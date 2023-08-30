@@ -10,7 +10,8 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "com.rishub1205.agniapp"
+      "bundleIdentifier": "com.rishub1205.agniapp",
+      "buildNumber": "2"
     }
   }
 }

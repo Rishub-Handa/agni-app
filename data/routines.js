@@ -56,7 +56,7 @@ const routines = {
         'keyPoses': ['LateralStretch', 'BackTwist', 'SingleLegToeTouch', 'Butterfly', 'UpwardDog', 'DownwardDog', 'TablePose']
     },
     'TreePose': {
-        'title': 'Tree Pose',
+        'title': 'Tree Pose \n Coming soon...',
         'group': 'Progression',
         'skills': 'Balance',
         'duration': '5min',
@@ -67,7 +67,7 @@ const routines = {
         'keyPoses': ['ChildsPose', 'ChildsPose']
     },
     'ForwardFold': {
-        'title': 'Forward Fold',
+        'title': 'Forward Fold \n Coming soon...',
         'group': 'Progression',
         'skills': 'Flexibility',
         'duration': '5min',
@@ -104,24 +104,24 @@ const poses = {
         'description': 'Start standing with both feet together. Step one foot back in a wide stance, and bend the front knee into a lunge, while the back leg straight. Keep the back foot firm on the ground, facing 45 degrees from the front. Look forward, and square the hips forward. Reach your straight arms up, keeping your biceps by the ears. Tighten the glutes, hips, and core. '
     },
 
-    'LateralStretch': { // Arms Side to Side? 
+    'LateralStretch': { 
         'title': 'Side Stretch',
         'image': images.sideToSidePoseIcon,
         'description': 'Start standing neutral. Reach both hands up above the head into namaste. Slowly bend the torso and hips from side to side. Feel the stretch in your outer hips and back. '
     },
-    'BackTwist': { // TODO 
+    'BackTwist': {  
         'title': 'Back Twist',
-        'image': images.childsPoseIcon,
-        'description': 'Start standing neutral., Raise the arms spread beside the body, dynamically twist the torso from side to side. Keep the hands on the hips if you’re prone to dizziness. '
+        'image': images.backTwistPoseIcon,
+        'description': 'Start standing neutral. Raise the arms spread beside the body, dynamically twist the torso from side to side. Keep the hands on the hips if you’re prone to dizziness. '
     },
     // 'AnkleFlexion': {
     //     'title': 'Ankle Flexion',
     //     'image': images.childsPoseIcon,
     //     'description': 'beep boop'
     // },
-    'SingleLegToeTouch': { // TODO
+    'SingleLegToeTouch': { 
         'title': 'Single Leg Fold',
-        'image': images.childsPoseIcon,
+        'image': images.singleLegForwardFoldPoseIcon,
         'description': 'Start sitting down on a mat with your legs together stretched in front. Bring your right foot into the inner side of the left thigh, bending at the knee. Stretch your hands up above you and fold forward on the exhale, hinging from the hips. Grab your toes, ankles, or knees, bring the forehead down toward the knee. Feel the stretch in the back of your thighs and glues. '
     },
     'Butterfly': {

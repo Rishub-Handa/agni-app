@@ -14,8 +14,8 @@ const lifestyleCards = [
 ]
 
 const progressionCards = [
-    {name: 'Tree Pose', image: images.treePoseImage, routineId: 'TreePose'},
-    {name: 'Forward Fold', image: images.forwardFoldPoseImage, routineId: 'ForwardFold'},
+    {name: 'Tree Pose \n Coming soon...', image: images.treePoseImage, routineId: 'TreePose'},
+    {name: 'Forward Fold \n Coming soon...', image: images.forwardFoldPoseImage, routineId: 'ForwardFold'},
 ]
 
 const foundationsCards = [

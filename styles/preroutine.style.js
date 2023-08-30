@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
         fontFamily: FONT.medium,
         fontSize: SIZES.large,
         color: COLORS.black,
+        textAlign: "center",
+
     },
 
     preRoutineImage: {

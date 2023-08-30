@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         fontFamily: FONT.regular,
         fontSize: SIZES.medium,
         color: COLORS.black,
+        textAlign: "center",
     },
     heroCardHeading: {
         fontFamily: FONT.regular,
